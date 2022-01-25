@@ -39,8 +39,11 @@ const artist3 = "https://deezerdevs-deezer.p.rapidapi.com/search?q=behemoth"
 .then((response) => response.json())
     .then((data) => {
       console.log(data.data);
-      const song = function(){
-        
+      const songArr = data.data
+      
+      const songFunc = function(){
+        const artistContainerNode = document.getElementById("hereWeGo")
+
       }
     })
     .catch(error => console.warn(error));
