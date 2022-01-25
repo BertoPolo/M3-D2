@@ -22,54 +22,27 @@ const mouseoverSong = function () {
   }
   mouseoverSong()
 
-  // window.onload = () => {
-    const eminemFunc = function(){
-  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
+
+const artist1 = "https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem"
+const artist2 = "https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica"
+const artist3 = "https://deezerdevs-deezer.p.rapidapi.com/search?q=behemoth"
+
+  
+    const myfunc = function(artistVar){
+  fetch(artistVar, {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
 		"x-rapidapi-key": "cb01c22bd6msh0e8a97b3657aa1dp1c7f88jsn8d14e22972be"
 	}
 })
-.then(response => {
-return 	console.log(response);
-})
-.catch(err => {
-return 	console.error(err);
-})
+.then((response) => response.json())
+    .then((data) => {
+      console.log(data.data);
+      const song = function(){
+        
+      }
+    })
+    .catch(error => console.warn(error));
 }
 
-const metallicaFunc = function(){
-fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-		"x-rapidapi-key": "cb01c22bd6msh0e8a97b3657aa1dp1c7f88jsn8d14e22972be"
-	}
-})
-.then(response => {
-return 	console.log(response);
-})
-.catch(err => {
-return 	console.error(err);
-});
-}
-
-
-const behemothFunc = function(){
-  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=behemoth", {
-    "method": "GET",
-    "headers": {
-      "x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-      "x-rapidapi-key": "cb01c22bd6msh0e8a97b3657aa1dp1c7f88jsn8d14e22972be"
-    }
-  })
-  .then(response => {
-    return 	console.log(response);
-  })
-  .catch(err => {
-    return 	console.error(err);
-    
-  });
-}
-  // }
