@@ -21,3 +21,49 @@ const mouseoverSong = function () {
     }
   }
   mouseoverSong()
+
+  window.onload = () => {
+  fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+		"x-rapidapi-key": "cb01c22bd6msh0e8a97b3657aa1dp1c7f88jsn8d14e22972be"
+	}
+})
+.then(response => {
+return 	console.log(response);
+})
+.catch(err => {
+return 	console.error(err);
+})
+
+
+fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=metallica", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+		"x-rapidapi-key": "cb01c22bd6msh0e8a97b3657aa1dp1c7f88jsn8d14e22972be"
+	}
+})
+.then(response => {
+return 	console.log(response);
+})
+.catch(err => {
+return 	console.error(err);
+});
+
+
+fetch("https://deezerdevs-deezer.p.rapidapi.com/search?q=behemoth", {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+		"x-rapidapi-key": "cb01c22bd6msh0e8a97b3657aa1dp1c7f88jsn8d14e22972be"
+	}
+})
+.then(response => {
+return 	console.log(response);
+})
+.catch(err => {
+return 	console.error(err);
+});
+  }
