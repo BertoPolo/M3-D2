@@ -33,7 +33,7 @@ const artist3 = "https://deezerdevs-deezer.p.rapidapi.com/search?q=behemoth"
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-		"x-rapidapi-key": "cb01c22bd6msh0e8a97b3657aa1dp1c7f88jsn8d14e22972be"
+		"x-rapidapi-key": 
 	}
 })
 .then((response) => response.json())
